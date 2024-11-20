@@ -1,0 +1,99 @@
+/* 
+Main: 
+Background - #fffaf3 - tan - rgba(255, 250, 243, 1)
+Text - #000000 - black - rgba(0, 0, 0, 1)
+
+Topic/ Main Accents: 
+#fcbbaf - pink - rgba(252, 187, 175, 1)
+#bada55 - green - rgba(186, 218, 85, 1) 
+#81e3da - blue - rgba(129, 227, 218, 1)
+#fffb87 - yellow - rgba(255, 251, 135, 1)
+
+Smaller Accents: 
+#b5bdfc - purple - rgba(181, 189, 252, 1) 
+#ffc49a - peach - rgba(255, 196, 154, 1)
+*/
+
+
+
+
+
+body {
+    background-color: #fffaf3;
+      font-family: "Nunito", serif;
+      font-optical-sizing: 16px;
+      font-weight: 400;
+      font-style: normal;
+    line-height:1.2;
+      color: #000000;
+    }
+ 
+h1, h2, h3, h4 {
+    line-height: 1.3;
+}
+
+h1 {
+font-size:2.75em;
+font-weight:700;
+} /*main section*/
+
+h2 {
+    font-size:1.75em; 
+    font-weight:700;
+} /*main topics*/
+
+h3  {
+font-size:1.45em ;
+font-weight: 700;
+}/*smaller topics*/
+
+h4{
+    font-size: 1.25;
+    font-weight: 700;
+}/*small lables*/
+
+img{width:100%;}
+
+a{
+    color:#000000;
+    text-decoration:none;/*no underlining*/
+}
+
+a:visted{
+    color:#000000;/*vistited link*/
+}
+
+
+a:hover {
+    color:#fcbbaf;
+    text-decoration: underline;/*underline when hovering over link*/ 
+}
+
+a:active{
+    color:#bada55; /*when the use clicks the link*/
+}
+
+
+.primary-button{
+    background-color:#9AC672 ;
+    color:#ffffff;
+    font-family: "Nunito", serif;
+    font-size:18px;
+    font-weight: 700;
+    padding:10px 20px;
+    border-radius:50px; /*how round the corners of the button are*/
+    border:none;
+    transition: 0.2s opacity;
+}
+
+.primary-button:hover{
+background-color: #CBE8B0;
+color: #000000;
+}
+
+.primary-button:active{
+    background-color: #CBE8B0;
+    color: #000000;
+}
+
+
