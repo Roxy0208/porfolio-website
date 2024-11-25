@@ -26,19 +26,37 @@ body {
       font-style: normal;
     line-height:1.2;
       color: #000000;
+     
+    }
+
+    * {
+        box-sizing: border-box;
     }
  
 
     header{
-        background-color:#fffaf3;
-        padding:10px;/*inner spacing*/ 
-        margin:10px;/*outer spacing*/
+        position: fixed; /* Keeps the header fixed at the top of the screen */
+        background-color: #fffaf3;
+        padding: 10px 0; /* Inner spacing */
+        margin: 0; /* Remove outer spacing to avoid misalignment */
+        text-align: center;
+        width: 100%; /* Ensures it spans the full width of the screen */
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1); /* Adds the shadow effect */
+        z-index: 1000; /* Keeps the header above other content */
     }
+    main {
+        padding-top: 250px; /* Adds space below the header to avoid overlapping content */
+    }
+   
+    #menu .logo {
+        max-width: 250px;
+    }
+
+
 
 h1, h2, h3, h4 {
     line-height: 1.3;
 }
-
 
 
 
@@ -58,7 +76,7 @@ font-weight: 700;
 }/*smaller topics*/
 
 h4{
-    font-size: 1.25;
+    font-size: 1.25em;
     font-weight: 700;
 }/*small lables*/
 
@@ -69,7 +87,7 @@ a{
     text-decoration:none;/*no underlining*/
 }
 
-a:visted{
+a:visited{
     color:#000000;/*vistited link*/
 }
 
@@ -108,6 +126,70 @@ color: #000000;
 
 
 
+/*layout styling*/
+.container {
+    padding:0 15px;   
+}
+
+
+nav > ul {
+    list-style-type:none;
+    padding:0;
+}
+nav>ul>li{
+    display:inline-block;
+}
+
+nav>ul>li>a{
+    padding:0 15px;
+    text-transform:uppercase;
+    font-weight: 700;
+    color:#000000 ;
+}
+
+
+
+/*hero section*/
+#hero h1 {
+    text-align:center; /*centers text*/
+}
+
+#hero {
+    background-color: #fffaf3;
+}
+
+#hero h1{
+    margin:0;
+    padding: 0.67em 0;
+}
+
+#hero .container{
+    text-align: center;
+}
+
+/*work section*/
+#work .container{
+    text-align: center;
+}
+
+.row{
+    margin: 25px 0; /* 25 top and bottom, 0 left and right */
+}
+
+#work .row{
+    padding-bottom: 25px; border-bottom: 1px solid #4a4a4a;
+}
+
+
+/*footer*/
+#contact .container{
+    text-align: center;
+}
+
+#contact .primary-button{
+    margin-top: 10px
+}
+
 .social{
     text-align:center;
 }
@@ -116,3 +198,241 @@ color: #000000;
     width: 20px;
     display: inline-block;
 }
+
+
+#contact .social{
+    margin: 24px 0; /* spacing between "email" button and social media icons*/
+}
+
+
+
+/* PAGE 2 about CSS */
+#about .container{
+    text-align: center; 
+}
+
+#my_story .about_photo{
+        text-align: center;
+}
+
+#my_story .primary-button{
+    margin: 30px auto;
+}
+
+.skills_title {
+    margin-top: 50px;
+}
+
+.skills_list {
+    list-style-type: none; /* Removes bullet points */
+    margin: 0; /*  Removes default margin */
+    padding: 0; /*  Removes default padding */
+}
+
+.tools_title{
+    margin-top: 55px;
+}
+
+.tools_list {
+    list-style-type: none; /* Removes bullet points */
+    margin: 0; /*  Removes default margin */
+    padding: 0; /*  Removes default padding */
+}
+
+
+/*Vela Project CSS*/
+
+#vela_project .container { /*vela image and text*/
+    text-align: center;
+}
+
+#vela_overview .container{ /*project overview and goal text*/
+    text-align: center;
+}
+
+/*Research*/
+
+#vela_research .research_title{/*Research title*/
+    padding: 0 15px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+#vela_research .topic{/*Competitive analysis*/
+    margin-top: 35px;
+    padding: 0 15px;
+    text-align: center;
+}
+
+#vela_research .content {/*content SWOT for comptitive analysis*/
+    padding: 0 15px;
+    margin-top: 35px;
+}
+
+#vela_research .user_research_img{
+    margin: 30px;
+}
+
+#vela_research .user_research_logo_img{
+    margin-top: 3px;
+    margin-left: 135px;
+    margin-right:135px;
+    margin-bottom: 0px;
+}
+
+
+
+
+
+
+
+/*User Interviews & Analysis*/
+
+#vela_interviews_analysis .container{/**/
+    text-align: center;
+}
+
+#vela_interviews_analysis .interview_results{/*image*/
+    margin-top: 40px;
+}
+
+#vela_interviews_analysis .take_aways_title{/*take aways title*/
+    margin-top: 40px;
+}
+
+#vela_interviews_analysis .content{ /*take aways text*/
+    margin-top: 35px;
+    text-align: left;
+    padding: 0 15px;
+}
+
+/*personas*/
+
+#vela_personas .container { /*personas title and description*/
+    text-align: center;
+    margin-top: 70px; /*distance from user interviews section*/
+}
+
+#vela_personas .amayas_persona{
+    margin-top: 45px; /*amayas img & distance from persona text*/
+}
+
+#vela_personas .freyas_persona{
+    margin-top: 45px; /* freyas img & distance from amayas persona*/
+}
+
+/*user journeys & user flows*/
+
+#vela_user_journeys_and_user_flows .container{
+    text-align: center;
+    margin-top: 70px; /*distance from the persona section*/
+}
+
+#vela_user_journeys_and_user_flows .content{
+    text-align: center;
+    margin-top: 45px;
+    margin-left: 20px;
+    margin-right: 15px;
+}
+
+/*Sitemap*/
+
+#vela_sitemap .container{ /*Sitemap title & description*/
+    margin-top: 70px;
+    text-align: center;
+}
+
+#vela_sitemap .sitemap_img{
+    margin-top: 45px;
+}
+
+/*Evolution of Vela*/
+
+#the_evolution_of_vela .container{ /*evolution of vela title & description*/
+    margin-top: 70px;
+    text-align: center;
+}
+
+
+
+#the_evolution_of_vela .evo_imgs{ /*home fidelity screenshot*/
+    margin-top: 35px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 65px;
+}
+
+#the_evolution_of_vela .evo_final_imgs{
+   margin-bottom: 65px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*high fidelity before makeover*/
+
+#vela_high_fid_before_makeover .container{ /*distance from title to other topic*/
+    text-align: center;
+    margin-top: 70px;
+}
+
+#vela_high_fid_before_makeover .high_fid_img { /*distance from wireframe image to text*/
+    margin-top: 40px;
+    
+}
+
+#vela_high_fid_before_makeover .primary-button {/*distance from button to screenshot*/
+    margin-top: 35px;
+}
+
+/*testing & results*/
+
+#vela_testing_and_results .container{/*distance from title to past topic*/
+    text-align: center;
+    margin-top: 70px;
+}
+
+#vela_testing_and_results .testing_results_img{ /*distance from image to text*/
+    margin-top: 40px;
+}
+
+/*high fidelity final*/
+
+#vela_high_fid_final .container{ /*title from past topic*/
+    text-align: center;
+    margin-top: 70px;
+}
+
+#vela_high_fid_final .high_fid_final_overview { /*space around the overview img*/
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#vela_high_fid_final .primary-button { /*space around the overview img*/
+    margin-top: 35px;
+}
+
+
+/*conclusion section*/
+
+#vela_conclusion .container{
+    text-align: center;
+    margin-top: 70px;
+}
+
+
+/*Contact*/
+
+#contact .container{
+    margin-top: 60px;
+}
+
