@@ -66,12 +66,12 @@ font-weight:700;
 } /*main section*/
 
 h2 {
-    font-size:1.75em; 
-    font-weight:700;
+    font-size:2.00em; 
+    font-weight:800;
 } /*main topics*/
 
 h3  {
-font-size:1.45em ;
+font-size:1.75em ;
 font-weight: 700;
 }/*smaller topics*/
 
@@ -111,12 +111,13 @@ a:active{
     padding:10px 20px;
     border-radius:50px; /*how round the corners of the button are*/
     border:none;
-    transition: 0.2s opacity;
+    transition: 0.3s background-color, 0.3s color, 0.2s opacity;
 }
 
 .primary-button:hover{
 background-color:#CBE8B0;
 color: #000000;
+opacity: 0.8;
 }
 
 .primary-button:active{
@@ -166,6 +167,10 @@ nav>ul>li>a{
 #hero .container{
     text-align: center;
 }
+
+#hero span {
+    display: block;
+  }
 
 /*work section*/
 #work .container{
@@ -269,20 +274,9 @@ nav>ul>li>a{
     margin-top: 35px;
 }
 
-#vela_research .user_research_img{
+#vela_research .competitor_screenshots{
     margin: 30px;
 }
-
-#vela_research .user_research_logo_img{
-    margin-top: 3px;
-    margin-left: 135px;
-    margin-right:135px;
-    margin-bottom: 0px;
-}
-
-
-
-
 
 
 
@@ -368,16 +362,6 @@ nav>ul>li>a{
 
 
 
-
-
-
-
-
-
-
-
-
-
 /*high fidelity before makeover*/
 
 #vela_high_fid_before_makeover .container{ /*distance from title to other topic*/
@@ -436,3 +420,508 @@ nav>ul>li>a{
     margin-top: 60px;
 }
 
+
+/*illutration*/
+
+.berlin-illustration {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+    @keyframes color-change{
+        0% {fill: #edc655;}
+        50% {fill: #fcffad;}
+        100% {fill: #f76414;}
+    }
+
+    .berlin-illustration .sun {
+        animation: 4s color-change infinite alternate linear;
+      }
+
+@keyframes cloud-move {
+    from {transform:translate(0,50px);}
+    to {transform:translate(200px,50px);}
+}
+
+.cloud-front {
+    animation: 30s cloud-move infinite alternate linear;
+  }
+
+  @keyframes cloud-move-reverse {
+    from {transform: translate(446px,48px);}
+    to {transform: translate(100px, 48px);}
+  }
+
+  .cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+  }
+    
+
+
+
+
+
+
+
+
+/*Media Queries*/
+
+@media only screen and (min-width: 640px) { 
+    header {
+        text-align: unset;
+        padding: 20px 0 13px;
+    }
+
+    nav {
+        width: auto;
+        float: right;
+        margin-top: 4px;
+    }
+    
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+  
+
+    .col-md-6 {
+        width: 50%; /* Ensure columns 50% width */
+    
+    }
+
+    [class*="col-"] {
+        float: left;
+        padding: 10px;
+      }
+    
+
+    img {
+        max-width: 100%; /* Ensure the image doesn't overflow */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .container {
+        width: 100%;
+        max-width: 640px; /* Restrict to fit intended width */
+        margin: 0 auto; /* Center the container */
+        padding: 0 15px; /* Add spacing on smaller screens */
+        
+    }
+
+    #my_story h3 { margin-top: 10;
+    }
+
+    #my_story .col-md-12 {
+        margin-bottom: 50px;
+    }
+
+.skills_title{
+    text-align: center; /* Align text to the left */
+}
+
+    .skills_list {
+        text-align: center; /* Align text to the left */
+    }
+
+.tools_title{
+    text-align: center /* Align text to the left */
+}
+
+.tools_list{
+    text-align: center; /* Align text to the left */
+}
+
+.vela_text{
+    text-align: left;
+}
+.vela_home_button{
+    float: left; /* Float the button to the left */
+    margin-left: 0; /* Ensure no extra space on the left */
+}
+
+
+
+
+/*Research*/
+
+#vela_research .content{
+    margin-left: 50px;
+}
+
+#vela_research .threats{
+    margin-bottom: 70px;
+}
+
+#vela_overview .goal{
+    margin-bottom: 80px;
+}
+
+
+#vela_interviews_analysis{
+    padding-top: 35px;
+}
+
+#vela_research .competitor_screenshots{
+    padding: 10px 50px 35px ;
+}
+
+
+/*User Interviews*/
+
+#vela_interviews_analysis .interview_results{
+    padding: 20px 50px 20px;
+}
+
+
+
+/*personas*/
+
+#vela_personas {
+    padding-top: 35px;
+}
+
+#vela_personas .amayas_persona{
+    padding: 5px 50px 0px;
+
+}
+
+#vela_personas .freyas_persona{
+    padding: 5px 50px 35px ;
+}
+
+
+#vela_user_journeys_and_user_flows .container{
+    padding-bottom: 10px ;
+}
+
+#vela_user_journeys_and_user_flows .journeys_flows_img {
+padding: 10px 50px 5px;
+}
+
+#vela_user_journeys_and_user_flows .amayas_user_flow{
+    padding-bottom: 20px;
+}
+
+
+/*Sitemap*/
+
+#vela_sitemap .container{
+    padding-top: 10px ;
+}
+
+#vela_sitemap .sitemap_description{
+    padding-bottom: 20px ;
+}
+
+#vela_sitemap .sitemap_img{
+    padding: 0px 50px 0px ;
+}
+
+
+/*elolution of of Vela*/
+
+#the_evolution_of_vela{
+    padding-top: 35px ;
+}
+
+
+/*High-fid before makeover*/
+#vela_high_fid_before_makeover .paragraph{
+    padding-bottom: 20px;
+}
+
+#vela_high_fid_before_makeover .container{
+    padding-bottom: 35px;
+}
+
+
+#vela_high_fid_before_makeover .high_fid_img{
+    padding: 15px 50px 15px ;
+}
+
+
+/*testing and results*/
+
+#vela_testing_and_results .testing_results_img{
+    padding: 0px 50px 30px;
+}
+
+
+
+/*High-Fid Final*/
+
+#vela_high_fid_final .container{
+    padding-top: 10px;
+}
+
+#vela_high_fid_final .paragraph{
+    padding-bottom: 30px;
+}
+
+#vela_high_fid_final .primary-button{
+    padding-bottom: 5px;
+}
+
+#vela_high_fid_final .high_fid_final_overview{
+    padding: 0px 50px 0px;
+}
+
+
+/*Conclusion*/
+
+#vela_conclusion{
+   padding-top: 35px;
+   padding-bottom: 35px;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+/* Large devices (1024px or larger) */
+@media only screen and (min-width: 1024px) {
+
+
+    header {
+        text-align: unset;
+        padding: 20px 0 13px;
+    }
+
+    nav {
+        width: auto;
+        float: right;
+        margin-top: 4px;
+    }
+    
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+  
+
+      .col-lg-7 {
+        width: 60%; 
+        float: left; /* Float left */
+        padding: 10px; /* Add padding */
+    }
+
+    /* Right column (40%) */
+    .col-lg-5 {
+        width: 40%;
+        float: left; /* Float left */
+        padding: 10px; /* Add padding */
+    }
+
+    [class*="col-"] {
+        float: left;
+        padding: 10px;
+      }
+    
+
+    img {
+        max-width: 100%; /* Ensure the image doesn't overflow */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .container {
+        width: 100%;
+        max-width: 1200px; /* Restrict to fit intended width */
+        margin: 0 auto; /* Center the container */
+        padding: 0 15px; /* Add spacing on smaller screens */
+        
+    }
+
+    #my_story h3 { 
+        margin-top: 0;
+    }
+
+.skills_title,
+.skills_list,
+.tools_title,
+.tools_list
+ {
+    text-align: left; /* Align text to the left */
+}
+
+/*Home Screen*/
+
+#hero .intro{
+    padding-bottom: 100px;
+}
+
+
+/*Intro Overview*/
+
+#vela_project .thumbnail_img img{
+    
+    padding: 0px 170px 70px;
+}
+
+#vela_overview .container{
+    padding-top: 35px;
+}
+
+
+/* Competitive Analysis */
+
+#vela_research .research_container{
+    padding-top: 50px;
+}
+#vela_research .topic{
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+#vela_research .content{
+    padding: 0px 320px 35px;
+  
+}
+
+#vela_research .user_research_img{
+    padding: 0px 200px 35px;
+}
+
+
+
+
+/*vela interview analysis section */
+
+#vela_interviews_analysis .user_interviews_title{
+    padding-top: 70px;
+}
+
+#vela_interviews_analysis .interview_results{
+    padding: 35px 130px 40px;
+}
+#vela_interviews_analysis .take_aways_title{
+    padding: 0px 120px 35px;
+}
+#vela_interviews_analysis .content{
+    padding: 0px 50px 35px;
+}
+
+/*Personas*/
+
+#vela_personas .persona_description{
+    padding-bottom: 30px ;
+}
+#vela_personas .amayas_persona{
+    padding: 0px 130px 35px;
+    padding-right: 130;
+}
+
+#vela_personas .freyas_persona{
+    padding: 0px 130px 0px;
+}
+
+
+/*Vela User Journeys and flows*/
+
+#vela_user_journeys_and_user_flows .container {
+    padding: 50px 0px 30px 0px;
+}
+#vela_user_journeys_and_user_flows .journeys_flows_img{
+    padding:  20px 200px 35px;
+}
+
+
+/*sitemap*/
+
+#vela_sitemap .sitemap_title{
+    padding-top: 5px;
+}
+#vela_sitemap .sitemap_description{
+    padding-bottom: 30px;
+}
+#vela_sitemap .sitemap_img{
+    padding: 10px 250px 0px;
+}
+
+
+
+
+/*The Evelution of Vela*/
+
+#the_evolution_of_vela .evo_title{
+    margin: 0;
+    padding-top: 0px;
+}
+
+#the_evolution_of_vela .screen_titles{
+  
+    margin: 0;
+    padding: 0px 0px 20px 0px;
+}
+
+#the_evolution_of_vela .evo_imgs{
+    padding: 0px 170px 10px;
+}
+
+#the_evolution_of_vela .evo_final_imgs{
+    padding: 20px 410px 30px;
+}
+
+#vela_high_fid_before_makeover .high_fid_img{
+    padding: 0px 20px 40px;
+}
+
+
+
+/*Before Makeover*/
+
+#vela_high_fid_before_makeover .paragraph{
+    padding-bottom: 45px;
+}
+
+#vela_high_fid_before_makeover .high_fid_img{
+    padding: 0px 200px 35px;
+}
+
+
+
+  
+/*Testing and results section*/
+
+#vela_testing_and_results .testing_results_img{
+    padding: 35px 150px 0px ;
+}
+
+/*High Fidelity Final Overview Section*/
+
+#vela_high_fid_final .paragraph {
+    padding-bottom: 35px;
+}
+
+#vela_high_fid_final .high_fid_final_overview{
+    padding: 0px 300px 0px ;
+}
+
+#vela_conclusion{
+    padding-bottom: 50px;
+}
+
+}
+
+
+
+
+
+
+
+#work {
+    width: 100%; /* Ensures the work section spans the full width */
+    clear: both; /* Prevents floating from affecting it */
+  }
+  
+  footer {
+    width: 100%; /* Ensures the footer spans the full width */
+    clear: both; /* Prevents floating from affecting it */
+  }
