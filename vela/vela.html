@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js"></script>
     <!--css style-->
 </head>
 
@@ -19,14 +20,17 @@
 <body>
     <header id="menu">
         <div class="container">
+            <div class="navtoggle" id="myNavtoggle"> 
                 <img class="logo" src="../img/logo.png" alt="Roxy Godoy logo">
-            <nav>
+                <nav>
                 <ul class="navigation">
                     <li><a href="../index.html">Work</a></li>
                     <li><a href="../about.html" target="_blank">About</a></li>
                     <li><a Href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+                    <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
+                    </ul>
+                </nav>
+           </div>
         </div>
     </header>
 
@@ -711,7 +715,13 @@
         </div>
     </footer>
 
-    <script src="js/scripts.js"></script>
+
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+    <script src="../js/scripts.js"></script>
 </body>
 
 </html>

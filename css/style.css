@@ -37,20 +37,37 @@ body {
     header{
         position: fixed; /* Keeps the header fixed at the top of the screen */
         background-color: #fffaf3;
-        padding: 10px 0; /* Inner spacing */
+        padding: 10px 0 4px; /* Inner spacing */
         margin: 0; /* Remove outer spacing to avoid misalignment */
-        text-align: center;
+        
         width: 100%; /* Ensures it spans the full width of the screen */
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1); /* Adds the shadow effect */
         z-index: 1000; /* Keeps the header above other content */
     }
     main {
-        padding-top: 250px; /* Adds space below the header to avoid overlapping content */
+        padding-top: 125px; /* Adds space below the header to avoid overlapping content */
     }
    
     #menu .logo {
-        max-width: 250px;
+        max-width: 150px;
     }
+
+    .navtoggle li:not(:last-child) {
+        display: none;
+      }
+
+
+      .navtoggle li .icon {
+        position: absolute;
+        right: 0;
+        top: 15px;
+        font-size: 22px;
+        padding-right: 10;
+      }
+
+      .navtoggle .responsive li  {
+        display: block;
+      }
 
 
 
@@ -136,10 +153,9 @@ opacity: 0.8;
 nav > ul {
     list-style-type:none;
     padding:0;
+    margin: 0;
 }
-nav>ul>li{
-    display:inline-block;
-}
+
 
 nav>ul>li>a{
     padding:0 15px;
@@ -147,6 +163,29 @@ nav>ul>li>a{
     font-weight: 700;
     color:#000000 ;
 }
+
+.navtoggle, .navtoggle.responsive {
+    position: relative;
+  }
+
+  .navtoggle.responsive li  {
+    display: block;
+  }
+
+  .navtoggle.responsive nav {
+    padding: 24px 0 0;
+  }
+  .navtoggle.responsive li  {
+    display: block;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255,127,80,0.5);
+  }
+  
+  .navtoggle.responsive li:last-child  {
+    padding: 0 0 10px;
+  }
+
+
 
 
 
@@ -478,7 +517,23 @@ nav>ul>li>a{
         float: right;
         margin-top: 4px;
     }
-    
+
+    nav>ul>li{
+        display:inline-block;
+    }
+
+    .navtoggle li:not(:last-child) {
+        display: inline-block;
+      }
+
+      .navtoggle li:last-child {
+        display: none;
+      }
+
+      nav > ul {
+        margin: 1em 0;
+      }
+
     .row::after {
         content: "";
         clear: both;
@@ -516,6 +571,7 @@ nav>ul>li>a{
         margin-bottom: 50px;
     }
 
+    
 .skills_title{
     text-align: center; /* Align text to the left */
 }
