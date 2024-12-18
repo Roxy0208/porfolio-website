@@ -1,4 +1,6 @@
+
 console.log('Hey there! Welcome to my portfolio!');
+
 
 function menuToggle() {
     var x = document.getElementById('myNavtoggle');
